@@ -1,8 +1,8 @@
 name: "BAI's BLOG"
 description: "白の屋"
 
-avatar: https://FromA2Z.github.io/images/self_info/avatar.jpg
-favicon: https://FromA2Z.github.io/images/self_info/favicon.ico
+avatar: ./images/self_info/avatar.jpg
+favicon: ./images/self_info/favicon.ico
 
 navigation:
   - name: 首页
