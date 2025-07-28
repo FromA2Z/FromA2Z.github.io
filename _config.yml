@@ -1,5 +1,5 @@
-name: "Pianfan's blog"
-description: "翩帆的个人技术博客"
+name: "BAI's BLOG"
+description: "白の屋"
 
 avatar: https://pianfan.github.io/images/avatar.jpg
 favicon: https://pianfan.github.io/images/favicon.ico
@@ -18,16 +18,16 @@ excerpt_separator: <!-- more -->
 
 footer-links:
   zhihu: 
-  email: xiongyunhan@outlook.com
+  email: blcforeverlover123@gmail.com
   facebook:
-  github: pianfan
+  github: FromA2Z
   rss: # just type anything here for a working RSS icon
   twitter: 
   youtube:
 
-footer-text: Copyright (c) 2024 Pianfan
+footer-text: Copyright (c) 2025 BAI
 
-url: https://pianfan.github.io
+url: https://FromA2Z.github.io
 
 permalink: /:title/
 paginate_path: /page:num/
