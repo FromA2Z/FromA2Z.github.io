@@ -1,5 +1,2 @@
----
-
 This is about self information...
 
----
