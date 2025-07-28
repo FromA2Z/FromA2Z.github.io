@@ -1,8 +1,8 @@
 name: "BAI's BLOG"
 description: "白の屋"
 
-avatar: https://pianfan.github.io/images/avatar.jpg
-favicon: https://pianfan.github.io/images/favicon.ico
+avatar: https://FromA2Z.github.io/images/self_info/avatar.jpg
+favicon: https://FromA2Z.github.io/images/self_info/favicon.ico
 
 navigation:
   - name: 首页
@@ -20,7 +20,7 @@ footer-links:
   zhihu: 
   email: blcforeverlover123@gmail.com
   facebook:
-  github: FromA2Z
+  github: https://github.com/FromA2Z
   rss: # just type anything here for a working RSS icon
   twitter: 
   youtube:
