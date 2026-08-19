@@ -1016,4 +1016,45 @@ footer {
   color: $base-color;
 }
 
+// ===== Blog category tabs =====
+.blog-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 20px 0 12px;
+  border-bottom: 1px solid $divider-color;
+}
+
+.blog-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: $base-lighten-color;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+  margin-bottom: -1px;
+
+  &:hover {
+    color: $base-color;
+  }
+
+  &.active {
+    color: $link-color;
+    border-bottom-color: $link-color;
+    font-weight: 600;
+  }
+}
+
+.post-cat {
+  display: inline-block;
+  font-size: 12px;
+  color: $link-color;
+  border: 1px solid $divider-color;
+  border-radius: 10px;
+  padding: 1px 8px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
 
