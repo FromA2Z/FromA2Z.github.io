@@ -22,6 +22,7 @@ html {
 body {
   font-family: $base-font;
   color: $base-color;
+  background-color: $background-color;
   line-height: 1.7em;
 }
 
@@ -434,6 +435,52 @@ nav {
   @include mobile {
     float: none;
     width: 100%;
+  }
+}
+
+// Hero (homepage intro)
+.hero {
+  padding: 40px 0 20px;
+
+  .hero-name {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+    line-height: 1.2;
+    color: $base-color;
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  .hero-tagline {
+    font-size: 18px;
+    color: $base-lighten-color;
+    margin: 0 0 24px;
+  }
+
+  .hero-links {
+    margin: 0;
+
+    .hero-link {
+      display: inline-block;
+      margin: 0 12px 12px 0;
+      padding: 6px 14px;
+      border: 1px solid $divider-color;
+      border-radius: 6px;
+      color: $link-color;
+      font-size: 15px;
+      background-color: $background-lighten-color;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $link-lighten-color;
+        border-color: $link-color;
+        background-color: $link-bghv-color;
+      }
+    }
   }
 }
 

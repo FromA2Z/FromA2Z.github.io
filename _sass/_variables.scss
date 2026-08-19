@@ -28,38 +28,38 @@ $base-font-size: 16px;
 $small-font-size: 14px;
 
 // Colors
-$base-color: $oc-gray-8;
-$base-lighten-color: $oc-gray-6;
-$base-lightener-color: $oc-gray-4;
+$base-color: #e6edf3;
+$base-lighten-color: #8b949e;
+$base-lightener-color: #6e7681;
 
-$background-color: $oc-gray-0;
-$background-lighten-color: #f8f9fa6b;
+$background-color: #0d1117;
+$background-lighten-color: #161b22;
 
 $text-color: $base-color;
-$link-color: $oc-blue-8;
-$link-lighten-color: $oc-blue-6;
-$link-bghv-color: $oc-blue-0;
-$divider-color: $oc-gray-1;
+$link-color: #58a6ff;
+$link-lighten-color: #79c0ff;
+$link-bghv-color: rgba(56,139,253,0.15);
+$divider-color: #21262d;
 
-$error-color:$oc-blue-8;
+$error-color:#58a6ff;
 
-$table-border-color: $oc-gray-2;
-$table-background-color: $oc-gray-1;
+$table-border-color: #30363d;
+$table-background-color: #161b22;
 
 $blockquote-color: $base-lighten-color;
-$blockquote-border-color: $oc-gray-3;
+$blockquote-border-color: #30363d;
 
-$footnote-link-border-color: $oc-gray-1;
-$footnote-link-background-over-color: $oc-gray-1;
+$footnote-link-border-color: #21262d;
+$footnote-link-background-over-color: #21262d;
 
 // $selection-color: $oc-black;
-$selection-background-color: $oc-gray-3;
+$selection-background-color: rgba(56,139,253,0.4);
 
-$tag-index-label-background-color: $oc-gray-2;
-$tag-index-count-background-color: #868e961a;
+$tag-index-label-background-color: #21262d;
+$tag-index-count-background-color: rgba(110,118,129,0.4);
 
-$footer-border-color: $oc-gray-2;
-$footer-background-color: $oc-gray-0;
+$footer-border-color: #21262d;
+$footer-background-color: #0d1117;
 
 // List
 $li-bottom-space: 0.4em;
