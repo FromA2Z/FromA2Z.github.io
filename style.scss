@@ -968,4 +968,52 @@ footer {
   }
 }
 
+// ===== News timeline =====
+.news-year {
+  margin-bottom: 24px;
+}
+
+.news-year-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $base-color;
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $divider-color;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .news-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+    padding-left: 0;
+
+    &:before {
+      content: none;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+}
+
+.news-date {
+  flex: 0 0 90px;
+  color: $link-color;
+  font-size: $small-font-size;
+  font-weight: 600;
+}
+
+.news-text {
+  flex: 1;
+  color: $base-color;
+}
+
 

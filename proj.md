@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 项目
-permalink: /works/
+title: Proj
+permalink: /proj/
 ---
 
 <div class="works">

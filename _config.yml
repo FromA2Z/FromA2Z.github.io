@@ -5,12 +5,12 @@ avatar: ./images/self_info/avatar.jpg
 favicon: ./images/self_info/favicon.ico
 
 navigation:
-  - name: 简历
-    url: /
-  - name: 项目
-    url: /works
-  - name: 博客
-    url: /blog
+  - name: About Me
+    url: /about
+  - name: Proj
+    url: /proj
+  - name: News
+    url: /news
 
 excerpt_separator: <!-- more -->
 

@@ -1,125 +1,71 @@
 ---
 layout: default
 ---
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="search blog posts..." style="width: 90%;
+    height: 35px;
+    color: #e6edf3;
+    background-color: #161b22;
+    line-height: 35px;
+    margin-top: 20px;
+    padding:10px 16px;
+    border: 1px solid #30363d;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 17px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);">
+  <ul id="results-container"></ul>
+</div>
 
-<div class="cv">
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
 
-  <header class="cv-header">
-    <img class="cv-photo" src="{{ site.baseurl }}/images/cv/shot.jpg" alt="Lichen Bai">
-    <div class="cv-heading">
-      <h1 class="cv-name">Lichen Bai</h1>
-      <p class="cv-title">Ph.D. Student · Artificial Intelligence · HKUST (Guangzhou)</p>
-      <div class="cv-contact">
-        <a class="hero-link" href="mailto:lbai292@connect.hkust-gz.edu.cn">Email</a>
-        <a class="hero-link" href="https://scholar.google.com/citations?user=KFYbvHoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="hero-link" href="https://github.com/FromA2Z" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-  </header>
+<script>
+	window.simpleJekyllSearch = new SimpleJekyllSearch({
+	searchInput: document.getElementById('search-input'),
+	resultsContainer: document.getElementById('results-container'),
+	json: '{{ site.baseurl }}/search.json',
+	searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+	noResultsText: 'No results found',
+	limit: 10,
+	fuzzy: false,
+	exclude: ['Welcome']
+  })
+</script>
 
-  <section class="cv-section">
-    <h2 class="cv-section-title">Education</h2>
-    <div class="cv-item">
-      <span class="cv-date">2025.09 – Present</span>
-      <div class="cv-item-body">
-        <strong>Ph.D. in Artificial Intelligence</strong>, The Hong Kong University of Science and Technology (Guangzhou)
-        <div class="cv-sub">Supervisor: Prof. Zeke Xie</div>
-      </div>
-    </div>
-    <div class="cv-item">
-      <span class="cv-date">2022.09 – 2025.06</span>
-      <div class="cv-item-body">
-        <strong>M.Eng.</strong>, Tsinghua Shenzhen International Graduate School, Tsinghua University
-        <div class="cv-sub">Supervisor: Prof. Hai-Tao Zheng</div>
-      </div>
-    </div>
-    <div class="cv-item">
-      <span class="cv-date">2017.09 – 2022.06</span>
-      <div class="cv-item-body">
-        <strong>B.Eng.</strong>, College of Computer Science, Sichuan University
-      </div>
-    </div>
-  </section>
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
 
-  <section class="cv-section">
-    <h2 class="cv-section-title">Employment</h2>
-    <div class="cv-item">
-      <span class="cv-date">2024.06 – 2026.02</span>
-      <div class="cv-item-body">
-        <strong>Co-founder / Algorithm Engineer</strong>, Fuguang AI
-        <p class="cv-desc">Video generation models and AIGC systems, focusing on post-training, efficient inference and benchmarking. The product launched online, securing early-stage funding and support from the Huawei Ascend Seed Program.</p>
-      </div>
-    </div>
-    <div class="cv-item">
-      <span class="cv-date">2026.03 – 2026.05</span>
-      <div class="cv-item-body">
-        <strong>Research Intern</strong>, Kling Video, Kuaishou Technology
-        <p class="cv-desc">Research on rotary positional embeddings in video generation architectures and their impact on temporal modeling.</p>
-      </div>
-    </div>
-    <div class="cv-item">
-      <span class="cv-date">2026.05 – Present</span>
-      <div class="cv-item-body">
-        <strong>Algorithm Intern</strong>, Shanghai Xianjie Echo Technology Co., Ltd.
-        <p class="cv-desc">Post-training of real-time audio-video generation models — quality, stability, and controllability — leading the training of the MaineCoon interactive model.</p>
-      </div>
-    </div>
-  </section>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+      <h1>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h1>
 
-  <section class="cv-section">
-    <h2 class="cv-section-title">Research Interests</h2>
-    <div class="cv-item">
-      <div class="cv-item-body">
-        <strong>Generative AI and Video Foundation Models.</strong>
-        <p class="cv-desc">Video foundation models in generative AI — generation quality, temporal consistency, controllability, and efficiency. Current work includes post-training for video diffusion models, consistency-based distillation, sampling and inference analysis, and real-time streaming audio-video generation.</p>
+      <div class="meta">
+        <span class="date">
+          {{ post.date | date: "%Y-%m-%d" }}
+        </span>
+
+        <ul class="tag">
+          {% for tag in post.tags %}
+          <li>
+            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+              {{ tag }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-item-body">
-        <strong>Mechanistic Analysis of Multimodal Models.</strong>
-        <p class="cv-desc">Understanding how multimodal models represent and align across modalities — multimodal representations, positional encoding design, training mechanisms, and model behavior analysis.</p>
+
+      <div class="entry">
+        {{ post.excerpt | strip_html | truncate: 200 }}
       </div>
-    </div>
-  </section>
 
-  <section class="cv-section">
-    <h2 class="cv-section-title">Selected Publications</h2>
-    <ol class="cv-pubs">
-      <li><strong>MaineCoon: Pursuing A Real-Time Audio-Visual Social World Model.</strong> <em>Tech Report, 2026.</em></li>
-      <li><strong>Optimizing Few-Step Generation with Adaptive Matching Distillation.</strong> <em>ICML 2026.</em></li>
-      <li><strong>Weak-to-Strong Diffusion with Reflection.</strong> <em>ICLR 2026.</em></li>
-      <li><strong>Zigzag Diffusion Sampling: Diffusion Models Can Self-Improve via Self-Reflection.</strong> <em>ICLR 2025.</em></li>
-      <li><strong>Frozen Language Models Are Gradient Coherence Rectifiers in Vision Transformers.</strong> <em>AAAI 2025.</em></li>
-    </ol>
-    <p class="cv-more"><a href="https://scholar.google.com/citations?user=KFYbvHoAAAAJ&hl=en" target="_blank" rel="noopener">Full publication list on Google Scholar →</a></p>
-  </section>
-
-  <section class="cv-section">
-    <h2 class="cv-section-title">Honors &amp; Awards</h2>
-    <ul class="cv-list">
-      <li><strong>AI Thrust Rising Star Award</strong>, HKUST(GZ), 2026</li>
-      <li><strong>Outstanding Master's Thesis Award</strong>, Tsinghua University, 2025</li>
-      <li><strong>Outstanding Professional Practice Award</strong>, Tsinghua University, 2025</li>
-      <li><strong>Computer Science Star Award</strong>, College of Computer Science, Sichuan University, 2022</li>
-    </ul>
-  </section>
-
-  <section class="cv-section">
-    <h2 class="cv-section-title">Academic Service</h2>
-    <div class="cv-item">
-      <div class="cv-item-body">
-        <strong>Reviewer</strong> for ICML, NeurIPS, ICLR, ICME, ICASSP, AAAI, etc.; recognized as an <strong>ICML 2026 Silver Reviewer</strong>.
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <h2 class="cv-section-title">Patents</h2>
-    <ul class="cv-list">
-      <li>A Training-Free Video Style Transfer Method based on Text Feature Mapping and Attention Editing</li>
-      <li>A General Visual Navigation Method based on Multi-modal Data Input</li>
-      <li>A Weakly-Supervised Learning Method for Ambiguous Data with Hard Annotation</li>
-    </ul>
-  </section>
-
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
 </div>
