@@ -35,7 +35,8 @@ layout: default
 </script>
 
 <div class="blog-tabs">
-  <button class="blog-tab active" data-cat="Tech">Tech</button>
+  <button class="blog-tab active" data-cat="All">All</button>
+  <button class="blog-tab" data-cat="Tech">Tech</button>
   <button class="blog-tab" data-cat="Reading">Reading</button>
   <button class="blog-tab" data-cat="Life">Life</button>
 </div>
@@ -88,7 +89,7 @@ layout: default
         tab.classList.add('active');
         var cat = tab.getAttribute('data-cat');
         posts.forEach(function(p) {
-          p.style.display = (p.getAttribute('data-cat') === cat) ? '' : 'none';
+          p.style.display = (cat === 'All' || p.getAttribute('data-cat') === cat) ? '' : 'none';
         });
       });
     });
