@@ -773,4 +773,199 @@ footer {
 @import "highlights";
 //@import "gitalk";
 
+// ===== Link button (shared by hero & CV header) =====
+.hero-link {
+  display: inline-block;
+  margin: 0 12px 12px 0;
+  padding: 6px 14px;
+  border: 1px solid $divider-color;
+  border-radius: 6px;
+  color: $link-color;
+  font-size: 15px;
+  background-color: $background-lighten-color;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $link-lighten-color;
+    border-color: $link-color;
+    background-color: $link-bghv-color;
+  }
+}
+
+// ===== CV / Resume page =====
+.cv-header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 0 16px;
+  border-bottom: 1px solid $divider-color;
+  margin-bottom: 24px;
+
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.cv-photo {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid $divider-color;
+  margin: 0;
+}
+
+.cv-name {
+  font-size: 36px;
+  margin: 0 0 4px;
+  color: $base-color;
+}
+
+.cv-title {
+  font-size: 17px;
+  color: $base-lighten-color;
+  margin: 0 0 16px;
+}
+
+.cv-contact {
+  .hero-link {
+    margin-bottom: 6px;
+  }
+}
+
+.cv-section {
+  margin-bottom: 28px;
+}
+
+.cv-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $divider-color;
+  color: $base-color;
+}
+
+.cv-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+.cv-date {
+  flex: 0 0 150px;
+  color: $base-lighten-color;
+  font-size: $small-font-size;
+  font-weight: 300;
+}
+
+.cv-item-body {
+  flex: 1;
+  color: $base-color;
+}
+
+.cv-sub {
+  color: $base-lighten-color;
+  font-size: $small-font-size;
+}
+
+.cv-desc {
+  color: $base-lighten-color;
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+.cv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin: 0 0 6px;
+    padding-left: 0;
+
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.cv-pubs {
+  padding-left: 1.2em;
+
+  li {
+    margin-bottom: 6px;
+  }
+}
+
+.cv-more a {
+  color: $link-color;
+}
+
+// ===== Works / project cards =====
+.works {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.work-card {
+  display: block;
+  border: 1px solid $divider-color;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $background-lighten-color;
+  transition: border-color .2s, transform .2s;
+
+  &:hover {
+    border-color: $link-color;
+  }
+}
+
+.work-cover img {
+  width: 100%;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+}
+
+.work-body {
+  padding: 16px 18px;
+}
+
+.work-title {
+  font-size: 20px;
+  margin: 0 0 4px;
+  color: $base-color;
+}
+
+.work-venue {
+  font-size: 13px;
+  color: $link-color;
+  font-weight: 600;
+}
+
+.work-desc {
+  color: $base-lighten-color;
+  margin: 8px 0 12px;
+}
+
+.work-links {
+  .work-link {
+    display: inline-block;
+    font-size: 13px;
+    color: $base-lighten-color;
+    border: 1px solid $divider-color;
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin: 0 6px 6px 0;
+  }
+}
+
 

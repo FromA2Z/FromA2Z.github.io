@@ -1,0 +1,30 @@
+- title: MaineCoon 1.0
+  venue: Tech Report · 2026
+  description: A real-time audio-visual social world model pursuing interactive streaming generation.
+  link: https://mainecoon.tech/
+  image: /images/works/mainecoon.svg
+  links:
+    - label: Project
+      url: https://mainecoon.tech/
+    - label: arXiv
+      url: https://arxiv.org/abs/2606.17800
+    - label: GitHub
+      url: https://github.com/FromA2Z/MaineCoon
+
+- title: Adaptive Matching Distillation
+  venue: ICML · 2026
+  description: Optimizing few-step generation with adaptive matching distillation for efficient diffusion models.
+  link: https://arxiv.org/abs/2602.07345
+  image: /images/works/amd.svg
+  links:
+    - label: arXiv
+      url: https://arxiv.org/abs/2602.07345
+
+- title: Z-Sampling
+  venue: ICLR · 2025
+  description: Zigzag Diffusion Sampling — diffusion models can self-improve via self-reflection.
+  link: https://arxiv.org/abs/2412.10891
+  image: /images/works/zsampling.svg
+  links:
+    - label: arXiv
+      url: https://arxiv.org/abs/2412.10891

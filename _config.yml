@@ -5,14 +5,12 @@ avatar: ./images/self_info/avatar.jpg
 favicon: ./images/self_info/favicon.ico
 
 navigation:
-  - name: 首页
+  - name: 简历
     url: /
-  - name: 关于
-    url: /about
-  - name: 分类
-    url: /tags
-
-paginate: 8
+  - name: 项目
+    url: /works
+  - name: 博客
+    url: /blog
 
 excerpt_separator: <!-- more -->
 
@@ -30,7 +28,6 @@ footer-text: Copyright (c) 2025 BAI
 url: https://FromA2Z.github.io
 
 permalink: /:title/
-paginate_path: /page:num/
 
 # The release of Jekyll Now
 version: v1.2.0
