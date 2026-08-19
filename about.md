@@ -19,7 +19,7 @@ permalink: /about/
   - 构建内部模型评测体系，设计并开发覆盖多场景的视频生成 Fuguang Benchmark；
   - 推动模型工程化落地，参与视频模型并行推理、超分辨率、提示词优化等 Pipeline 构建。
 - **2026.03 – 2026.05** · 快手 Kling Video，研究实习生 —— 研究视频生成架构中的旋转位置编码（RoPE）及其对时序建模的影响。
-- **2026.05 – 至今** · 上海鲜界回声科技有限公司，算法实习生 —— 负责实时音视频生成模型的后训练（质量、稳定性、可控性），主导 MaineCoon 交互模型训练。
+- **2026.05 – 至今** · Catnip AI（上海），算法实习生 —— 负责实时音视频生成模型的后训练（质量、稳定性、可控性），主导 MaineCoon 交互模型训练。
 
 ### 研究方向
 
@@ -53,7 +53,7 @@ permalink: /about/
 
 - **2024.06 – 2026.02** · Co-founder / Algorithm Engineer, Fuguang AI — Video generation models and AIGC systems, focusing on post-training, efficient inference and benchmarking. The product launched online, securing early-stage funding and support from the Huawei Ascend Seed Program.
 - **2026.03 – 2026.05** · Research Intern, Kling Video, Kuaishou Technology — Research on rotary positional embeddings in video generation architectures and their impact on temporal modeling.
-- **2026.05 – Present** · Algorithm Intern, Shanghai Xianjie Echo Technology Co., Ltd. — Post-training of real-time audio-video generation models (quality, stability, controllability), leading the training of the MaineCoon interactive model.
+- **2026.05 – Present** · Algorithm Intern, Catnip AI (Shanghai) — Post-training of real-time audio-video generation models (quality, stability, controllability), leading the training of the MaineCoon interactive model.
 
 ### Research Interests
 

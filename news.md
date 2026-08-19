@@ -27,7 +27,7 @@ permalink: /news/
       </li>
       <li class="news-item">
         <span class="news-date">2026.05</span>
-        <span class="news-text">加入上海鲜界回声科技，主导 MaineCoon 交互模型训练。</span>
+        <span class="news-text">加入 Catnip AI（上海），主导 MaineCoon 交互模型训练。</span>
       </li>
       <li class="news-item">
         <span class="news-date">2026.03</span>
