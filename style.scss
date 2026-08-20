@@ -23,7 +23,10 @@ body {
   font-family: $base-font;
   color: $base-color;
   background-color: $background-color;
-  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(88, 166, 255, 0.12), transparent 60%);
+  background-image:
+    radial-gradient(ellipse 60% 45% at 15% 0%, rgba(88, 166, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 25%, rgba(140, 82, 255, 0.16), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(56, 139, 253, 0.12), transparent 60%);
   background-attachment: fixed;
   line-height: 1.7em;
   -webkit-font-smoothing: antialiased;
@@ -327,7 +330,7 @@ img {
   width: 30%;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-color: rgba(13, 17, 23, 0.72);
+	background-color: rgba(13, 17, 23, 0.5);
 	backdrop-filter: blur(24px) saturate(1.4);
 	-webkit-backdrop-filter: blur(24px) saturate(1.4);
 	height: 100%;
@@ -933,7 +936,7 @@ footer {
   border: 1px solid $divider-color;
   border-radius: 12px;
   overflow: hidden;
-  background-color: rgba(22, 27, 34, 0.55);
+  background-color: rgba(22, 27, 34, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: border-color .25s, transform .25s, box-shadow .25s;
