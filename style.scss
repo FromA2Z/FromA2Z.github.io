@@ -23,7 +23,11 @@ body {
   font-family: $base-font;
   color: $base-color;
   background-color: $background-color;
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(88, 166, 255, 0.12), transparent 60%);
+  background-attachment: fixed;
   line-height: 1.7em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -323,7 +327,9 @@ img {
   width: 30%;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-color: $background-color;
+	background-color: rgba(13, 17, 23, 0.72);
+	backdrop-filter: blur(24px) saturate(1.4);
+	-webkit-backdrop-filter: blur(24px) saturate(1.4);
 	height: 100%;
 	top: 0;
 	left:0;
@@ -379,12 +385,19 @@ img {
 
 .site-name {
   margin: 0 auto;
-  color: $base-color;
   cursor: pointer;
   font-family: $base-font;
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 1px;
+
+  a {
+    background: linear-gradient(120deg, #e6edf3 0%, #79c0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 }
 
 .site-description {
@@ -918,13 +931,17 @@ footer {
 .work-card {
   display: block;
   border: 1px solid $divider-color;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: $background-lighten-color;
-  transition: border-color .2s, transform .2s;
+  background-color: rgba(22, 27, 34, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color .25s, transform .25s, box-shadow .25s;
 
   &:hover {
-    border-color: $link-color;
+    border-color: rgba(88, 166, 255, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -1055,6 +1072,16 @@ footer {
   padding: 1px 8px;
   margin-right: 6px;
   vertical-align: middle;
+}
+
+// ===== Typography: serif for article body =====
+.entry {
+  font-family: $serif-font;
+  letter-spacing: 0.01em;
+
+  p, li {
+    font-family: $serif-font;
+  }
 }
 
 
