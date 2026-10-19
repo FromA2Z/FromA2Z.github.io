@@ -8,4 +8,14 @@ abstract: >-
   Leveraging frozen language models as gradient coherence rectifiers to improve vision transformer training.
 authors:
   - Lichen Bai
+  - Zixuan Xiong
+  - Hai Lin
+  - Guangwei Xu
+  - Xiangjin Xie
+  - Ruijie Guo
+  - Zhanhui Kang
+  - Hai-Tao Zheng
+  - Hong-Gee Kim
+links:
+  Paper: https://ojs.aaai.org/index.php/AAAI/article/view/32176
 ---
