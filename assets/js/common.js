@@ -40,3 +40,42 @@ $(function () {
         $grid.masonry('layout');
     });
 })
+
+/* BibTeX copy-to-clipboard */
+;(function () {
+    function fallbackCopy(text, done) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.top = '-1000px';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) { /* noop */ }
+        document.body.removeChild(ta);
+    }
+
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.pub-bibtex-copy');
+        if (!btn) return;
+        var pre = document.getElementById(btn.getAttribute('data-copy-from'));
+        if (!pre) return;
+        var text = pre.textContent.trim();
+        var original = btn.textContent;
+        var done = function () {
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function () {
+                btn.textContent = original;
+                btn.classList.remove('copied');
+            }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(function () {
+                fallbackCopy(text, done);
+            });
+        } else {
+            fallbackCopy(text, done);
+        }
+    });
+})();

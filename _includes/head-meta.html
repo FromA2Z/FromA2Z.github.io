@@ -1,0 +1,64 @@
+{%- assign site_title = site.title | default: site.data.profile.navbar_name -%}
+{%- assign base_desc = site.description | default: "" -%}
+
+{%- assign page_desc = page.description -%}
+{%- if page_desc == nil or page_desc == "" -%}
+    {%- if page.layout == 'blog_post' -%}
+        {%- assign page_desc = page.excerpt | default: page.content | strip_html | normalize_whitespace | truncate: 160 -%}
+    {%- else -%}
+        {%- assign page_desc = base_desc -%}
+    {%- endif -%}
+{%- endif -%}
+{%- assign page_desc = page_desc | strip_html | normalize_whitespace -%}
+
+{%- if page.is_home -%}
+    {%- assign doc_title = site_title -%}
+    {%- if site.tagline -%}{%- assign doc_title = site_title | append: " — " | append: site.tagline -%}{%- endif -%}
+{%- elsif page.title -%}
+    {%- assign doc_title = page.title | append: " | " | append: site_title -%}
+{%- else -%}
+    {%- assign doc_title = site_title -%}
+{%- endif -%}
+
+{%- assign og_image = page.image | default: "/assets/images/og.png" | absolute_url -%}
+{%- assign canonical = page.url | replace: 'index.html', '' | replace: '.html', '/' | absolute_url -%}
+{%- if page.canonical_url -%}{%- assign canonical = page.canonical_url | absolute_url -%}{%- endif -%}
+
+<title>{{ doc_title }}</title>
+<meta name="description" content="{{ page_desc | escape }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="author" content="{{ site.author | default: site.data.profile.navbar_name }}">
+<meta name="theme-color" content="#2563eb">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{% if page.layout == 'blog_post' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site_title | escape }}">
+<meta property="og:title" content="{{ doc_title | escape }}">
+<meta property="og:description" content="{{ page_desc | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site_title | escape }}">
+<meta property="og:locale" content="en_US">
+{%- if page.layout == 'blog_post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- if page.updated %}
+<meta property="article:modified_time" content="{{ page.updated | date_to_xmlschema }}">
+{%- endif %}
+<meta property="article:author" content="{{ site_title | escape }}">
+{%- for tag in page.tags %}
+<meta property="article:tag" content="{{ tag | escape }}">
+{%- endfor %}
+{%- endif %}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ doc_title | escape }}">
+<meta name="twitter:description" content="{{ page_desc | escape }}">
+<meta name="twitter:image" content="{{ og_image }}">
+
+<!-- Feed & icons -->
+<link rel="alternate" type="application/atom+xml" title="{{ site_title | escape }}" href="{{ '/feed.xml' | absolute_url }}">
+<link rel="icon" href="{{ '/images/self_info/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/og.png' | relative_url }}">

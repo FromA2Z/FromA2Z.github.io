@@ -388,6 +388,38 @@ img.img-thumbnail:hover {
     line-height: 1.6;
 }
 
+/* ---- BibTeX block ---- */
+.pub-bibtex-block summary {
+    cursor: pointer;
+    color: var(--muted);
+    font-weight: 600;
+    width: fit-content;
+}
+
+.pub-bibtex-block summary:hover {
+    color: var(--accent);
+}
+
+.pub-bibtex-block pre.pub-bibtex {
+    background-color: #f8fafc;
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+    padding: 0.7rem 0.85rem;
+    font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.76rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.pub-bibtex-copy {
+    font-size: 0.74rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    color: var(--ink-soft);
+}
+
 /* Year headings on the publications page */
 h2[id^="year-"] {
     scroll-margin-top: 5.5rem;

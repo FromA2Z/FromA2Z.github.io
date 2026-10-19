@@ -1,4 +1,7 @@
 {% assign item = include.item %}
+{% assign bib_slug = item.id | slugify %}
+{% assign bib_id_d = bib_slug | prepend: 'bib-d-' %}
+{% assign bib_id_m = bib_slug | prepend: 'bib-m-' %}
 <div class="d-none d-md-block">
     <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
@@ -22,7 +25,16 @@
                 <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
                 {% endif %}
                 {% endfor %}
+                {% if item.doi %}<a target="_blank" href="https://doi.org/{{ item.doi }}">[DOI]</a>{% endif %}
             </p>
+
+            {% if item.bibtex %}
+            <details class="pub-bibtex-block small mt-1">
+                <summary class="text-muted">BibTeX</summary>
+                <pre class="pub-bibtex mt-2 mb-0" id="{{ bib_id_d }}">{{ item.bibtex }}</pre>
+                <button type="button" class="btn btn-sm btn-light border mt-1 pub-bibtex-copy" data-copy-from="{{ bib_id_d }}">Copy</button>
+            </details>
+            {% endif %}
 
         </div>
     </div>
@@ -46,7 +58,16 @@
                     <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
                     {% endif %}
                     {% endfor %}
+                    {% if item.doi %}<a target="_blank" href="https://doi.org/{{ item.doi }}">[DOI]</a>{% endif %}
                 </p>
+
+                {% if item.bibtex %}
+                <details class="pub-bibtex-block small mt-1">
+                    <summary class="text-muted">BibTeX</summary>
+                    <pre class="pub-bibtex mt-2 mb-0" id="{{ bib_id_m }}">{{ item.bibtex }}</pre>
+                    <button type="button" class="btn btn-sm btn-light border mt-1 pub-bibtex-copy" data-copy-from="{{ bib_id_m }}">Copy</button>
+                </details>
+                {% endif %}
             </div>
         </div>
     </div>

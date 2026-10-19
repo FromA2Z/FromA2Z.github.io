@@ -2,6 +2,15 @@
 baseurl: "" # the subpath of your site, e.g. /blog (empty for root domain)
 url: "https://FromA2Z.github.io"
 
+title: "Lichen Bai"
+tagline: "Ph.D. Student at HKUST (Guangzhou)"
+author: "Lichen Bai"
+description: >-
+  Lichen Bai (白立忱) is a Ph.D. student in Artificial Intelligence at The Hong Kong University of
+  Science and Technology (Guangzhou), working on generative AI, video foundation models, diffusion
+  post-training and distillation.
+lang: en
+
 # Build settings
 markdown: kramdown
 kramdown:
@@ -17,6 +26,18 @@ plugins:
 collections:
   publications:
   news:
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image: /assets/images/og.png
+  - scope:
+      path: ""
+      type: publications
+    values:
+      image: /assets/images/og.png
 
 exclude:
   - Gemfile
