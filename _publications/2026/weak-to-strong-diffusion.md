@@ -13,4 +13,5 @@ authors:
   - Zeke Xie
 links:
   arXiv: https://arxiv.org/abs/2502.00473
+  GitHub: https://github.com/xie-lab-ml/Weak-to-Strong-Diffusion-with-Reflection
 ---
