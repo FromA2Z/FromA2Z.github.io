@@ -18,6 +18,5 @@ authors:
 links:
   Paper: https://ojs.aaai.org/index.php/AAAI/article/view/32176
 doi: 10.1609/aaai.v39i2.32176
-semantic_scholar_id: 6dfa1170e0495b0f79372756c0118109a8b9ff0f
 bibtex: "@inproceedings{bai2025frozen,\n  title         = {Frozen Language Models Are Gradient Coherence Rectifiers in Vision Transformers},\n  author        = {Bai, Lichen and Xiong, Zixuan and Lin, Hai and Xu, Guangwei and Xie, Xiangjin and Guo, Ruijie and Kang, Zhanhui and Zheng, Hai-Tao and Kim, Hong-Gee},\n  booktitle     = {AAAI Conference on Artificial Intelligence (AAAI)},\n  year          = {2025},\n  doi           = {10.1609/aaai.v39i2.32176}\n}"
 ---
