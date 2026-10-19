@@ -8,6 +8,9 @@
         {%- if page_desc.size < 30 -%}
             {%- assign page_desc = page.content | strip_html | normalize_whitespace | strip | truncatewords: 40 -%}
         {%- endif -%}
+        {%- if page_desc contains '。' -%}
+            {%- assign page_desc = page_desc | split: '。' | first | append: '。' -%}
+        {%- endif -%}
         {%- if page_desc.size < 10 -%}
             {%- assign page_desc = base_desc -%}
         {%- endif -%}

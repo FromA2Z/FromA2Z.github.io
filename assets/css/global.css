@@ -186,6 +186,14 @@ button:focus-visible {
     transition: background-color 0.25s var(--ease);
 }
 
+/* Clamp the excerpt in blog list rows */
+.border-bottom.border-gray.p-3 .text-muted.small:not(.mb-2) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .border-bottom.border-gray.p-3:hover {
         background-color: rgba(37, 99, 235, 0.03);
