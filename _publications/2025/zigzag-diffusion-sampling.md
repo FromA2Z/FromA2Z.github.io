@@ -7,7 +7,7 @@ pub_date:       "2025"
 abstract: >-
   Zigzag diffusion sampling — diffusion models can self-improve via self-reflection.
 authors:
-  - Bai Li
+  - Lichen Bai
 links:
   arXiv: https://arxiv.org/abs/2412.10891
 ---

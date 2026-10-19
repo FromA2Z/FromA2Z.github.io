@@ -7,5 +7,5 @@ pub_date:       "2026"
 abstract: >-
   A weak-to-strong diffusion framework that leverages self-reflection to progressively improve generation quality.
 authors:
-  - Bai Li
+  - Lichen Bai
 ---

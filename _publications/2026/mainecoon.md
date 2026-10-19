@@ -8,7 +8,7 @@ abstract: >-
   A real-time audio-visual social world model pursuing interactive streaming generation,
   enabling immersive, low-latency audio-video interaction.
 authors:
-  - Bai Li
+  - Lichen Bai
 links:
   Project: https://mainecoon.tech/
   arXiv: https://arxiv.org/abs/2606.17800

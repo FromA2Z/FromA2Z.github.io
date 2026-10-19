@@ -1,6 +1,6 @@
-primary_name: "Bai Li"
-secondary_name: "白立"
-navbar_name: "Bai Li"
+primary_name: "Lichen Bai"
+secondary_name: "白立忱"
+navbar_name: "Lichen Bai"
 
 positions:
 - name: Ph.D. Student
@@ -26,7 +26,7 @@ short_bio: >-
 
 portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
-  Bai Li
+  Lichen Bai
 
 education:
 - name: The Hong Kong University of Science and Technology (Guangzhou)
@@ -45,7 +45,7 @@ experience:
   date: Sep. 2026 - present
 - name: Catnip AI (Shanghai)
   position: Algorithm Intern
-  date: May 2026 - present
+  date: May 2026 - Sep 2026
 - name: Kling Video, Kuaishou Technology
   position: Research Intern
   date: Mar. 2026 - May 2026

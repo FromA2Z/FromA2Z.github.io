@@ -7,5 +7,5 @@ pub_date:       "2025"
 abstract: >-
   Leveraging frozen language models as gradient coherence rectifiers to improve vision transformer training.
 authors:
-  - Bai Li
+  - Lichen Bai
 ---

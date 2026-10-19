@@ -7,7 +7,7 @@ pub_date:       "2026"
 abstract: >-
   Optimizing few-step generation with adaptive matching distillation for efficient diffusion models.
 authors:
-  - Bai Li
+  - Lichen Bai
 links:
   arXiv: https://arxiv.org/abs/2602.07345
 ---
