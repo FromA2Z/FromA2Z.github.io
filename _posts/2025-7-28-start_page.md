@@ -1,11 +1,8 @@
 ---
-layout: post
+layout: blog_post
 title: "The Start"
-date:   2025-7-28
-category: Life
+date:   2025-07-28
 tags: [Introspection]
-comments: true
-author: BAI
 ---
 
 ---

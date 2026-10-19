@@ -1,3 +1,3 @@
-# pianfan.github.io
+# FromA2Z.github.io
 
-My Personal Blog via GitHub
+Personal academic homepage & blog, powered by [Jekyll](https://jekyllrb.com/) and the [academic-homepage](https://github.com/luost26/academic-homepage) template.
