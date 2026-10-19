@@ -8,4 +8,6 @@ abstract: >-
   A weak-to-strong diffusion framework that leverages self-reflection to progressively improve generation quality.
 authors:
   - Lichen Bai
+  - Masashi Sugiyama
+  - Zeke Xie
 ---

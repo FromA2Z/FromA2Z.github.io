@@ -9,6 +9,22 @@ abstract: >-
   enabling immersive, low-latency audio-video interaction.
 authors:
   - Lichen Bai
+  - Tianhao Zhang
+  - Shitong Shao
+  - Dingwei Tan
+  - Qiyu Zhong
+  - Zhengpeng Xie
+  - Haopeng Li
+  - Qinghao Huang
+  - Dandan Shen
+  - Tengjiao Ji
+  - Wei Wang
+  - Peicheng Wu
+  - Yuxuan Zhao
+  - Xiangyu Zhu
+  - Welly Luo
+  - Shurui Yang
+  - Zeke Xie
 links:
   Project: https://mainecoon.tech/
   arXiv: https://arxiv.org/abs/2606.17800

@@ -8,6 +8,13 @@ abstract: >-
   Optimizing few-step generation with adaptive matching distillation for efficient diffusion models.
 authors:
   - Lichen Bai
+  - Zikai Zhou
+  - Shitong Shao
+  - Wenliang Zhong
+  - Shuo Yang
+  - Shuo Chen
+  - Bojun Chen
+  - Zeke Xie
 links:
   arXiv: https://arxiv.org/abs/2602.07345
 ---
