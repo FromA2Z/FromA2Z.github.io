@@ -4,9 +4,9 @@
 {%- assign page_desc = page.description -%}
 {%- if page_desc == nil or page_desc == "" -%}
     {%- if page.layout == 'blog_post' -%}
-        {%- assign page_desc = page.excerpt | strip_html | normalize_whitespace | strip | truncate: 170 -%}
+        {%- assign page_desc = page.excerpt | strip_html | normalize_whitespace | strip | truncatewords: 40 -%}
         {%- if page_desc.size < 30 -%}
-            {%- assign page_desc = page.content | strip_html | normalize_whitespace | strip | truncate: 170 -%}
+            {%- assign page_desc = page.content | strip_html | normalize_whitespace | strip | truncatewords: 40 -%}
         {%- endif -%}
         {%- if page_desc.size < 10 -%}
             {%- assign page_desc = base_desc -%}
